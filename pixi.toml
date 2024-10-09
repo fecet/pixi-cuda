@@ -16,3 +16,4 @@ pytorch = "*"
 torchaudio = "*"
 torchvision = "*"
 libjpeg-turbo = { channel = "conda-forge" }
+python = "3.10.*"

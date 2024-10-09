@@ -11,3 +11,4 @@ dependencies:
   - torchaudio
   - torchvision
   - conda-forge::libjpeg-turbo
+  - python=3.10
