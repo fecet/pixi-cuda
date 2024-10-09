@@ -1,0 +1,13 @@
+channels:
+  - nvidia/label/cuda-12.4.0
+  - nvidia
+  - pytorch
+  - conda-forge
+dependencies:
+  - cuda=12.4
+  - pytorch-cuda=12.4
+  - cuda-driver-dev=12.4
+  - pytorch
+  - torchaudio
+  - torchvision
+  - conda-forge::libjpeg-turbo

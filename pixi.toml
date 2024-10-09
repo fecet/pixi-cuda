@@ -1,0 +1,18 @@
+[project]
+authors = ["fecet <xiezej@gmail.com>"]
+channels = ["nvidia/label/cuda-12.4.0", "nvidia", "pytorch", "conda-forge"]
+description = "Add a short description here"
+name = "pixi-cuda"
+platforms = ["linux-64"]
+version = "0.1.0"
+
+[tasks]
+
+[dependencies]
+cuda = "12.4.*"
+pytorch-cuda = "12.4.*"
+cuda-driver-dev = "12.4.*"
+pytorch = "*"
+torchaudio = "*"
+torchvision = "*"
+libjpeg-turbo = { channel = "conda-forge" }
