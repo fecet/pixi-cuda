@@ -1,6 +1,12 @@
 [project]
 authors = ["fecet <xiezej@gmail.com>"]
-channels = ["nvidia/label/cuda-12.4.0", "nvidia", "pytorch", "conda-forge"]
+channels = [
+  "nvidia/label/cuda-12.4.0",
+  "nvidia",
+  "pytorch",
+  "conda-forge",
+  "nodefaults",
+]
 description = "Add a short description here"
 name = "pixi-cuda"
 platforms = ["linux-64"]
@@ -17,3 +23,5 @@ torchaudio = "*"
 torchvision = "*"
 libjpeg-turbo = { channel = "conda-forge" }
 python = "3.10.*"
+ffmpeg = { channel = "conda-forge" }
+opencv = ">=4.10"
