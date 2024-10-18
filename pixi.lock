@@ -63,6 +63,7 @@ environments:
       - conda: https://conda.anaconda.org/nvidia/label/cuda-12.4.0/linux-64/cuda-tools-12.4.0-0.tar.bz2
       - conda: https://conda.anaconda.org/conda-forge/noarch/cuda-version-12.4-h3060b56_3.conda
       - conda: https://conda.anaconda.org/nvidia/label/cuda-12.4.0/linux-64/cuda-visual-tools-12.4.0-0.tar.bz2
+      - conda: https://conda.anaconda.org/conda-forge/linux-64/cudnn-9.3.0.75-h93bb076_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/cyrus-sasl-2.1.27-h54b06d7_7.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/dav1d-1.2.1-hd590300_0.conda
       - conda: https://conda.anaconda.org/conda-forge/linux-64/dbus-1.13.6-h5008d03_3.tar.bz2
@@ -1071,6 +1072,28 @@ packages:
   platform: linux
   size: 1883
   timestamp: 1709167860253
+- kind: conda
+  name: cudnn
+  version: 9.3.0.75
+  build: h93bb076_0
+  subdir: linux-64
+  url: https://conda.anaconda.org/conda-forge/linux-64/cudnn-9.3.0.75-h93bb076_0.conda
+  sha256: 3b1d64b535279b3046a90c323a91312654c668c565fc698c0868060afe0b393c
+  md5: 35aecccc610b9d83e73dff3385227cc4
+  depends:
+  - __glibc >=2.17,<3.0.a0
+  - cuda-nvrtc
+  - cuda-version >=12.0,<13
+  - cuda-version >=12.0,<13.0a0
+  - libcublas
+  - libgcc >=12
+  - libstdcxx >=12
+  - libzlib >=1.3.1,<2.0a0
+  arch: x86_64
+  platform: linux
+  license: LicenseRef-cuDNN-Software-License-Agreement
+  size: 402043285
+  timestamp: 1727797116985
 - kind: conda
   name: cyrus-sasl
   version: 2.1.27

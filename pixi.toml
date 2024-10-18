@@ -19,6 +19,7 @@ cuda = "12.4.*"
 pytorch-cuda = "12.4.*"
 cuda-driver-dev = "12.4.*"
 cuda-version = { version = "12.4", channel = "nvidia" }
+cudnn = { channel = "conda-forge" }
 pytorch = "*"
 torchaudio = "*"
 torchvision = "*"
