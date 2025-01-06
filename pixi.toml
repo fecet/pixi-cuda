@@ -1,9 +1,10 @@
 [project]
 authors = ["fecet <xiezej@gmail.com>"]
 channels = [
-  "nvidia/label/cuda-12.4.0",
-  "nvidia",
-  "pytorch",
+  # "nvidia/label/cuda-12.4.0",
+  # "nvidia",
+  # "pytorch",
+  "https://prefix.dev/meta-forge",
   "conda-forge",
   "nodefaults",
 ]
@@ -11,19 +12,35 @@ description = "Add a short description here"
 name = "pixi-cuda"
 platforms = ["linux-64"]
 version = "0.1.0"
+[system-requirements]
+cuda = "12.7"
 
 [tasks]
 
 [dependencies]
-cuda = "12.4.*"
-pytorch-cuda = "12.4.*"
-cuda-driver-dev = "12.4.*"
-cuda-version = { version = "12.4", channel = "nvidia" }
-cudnn = { channel = "conda-forge" }
-pytorch = "*"
-torchaudio = "*"
-torchvision = "*"
-libjpeg-turbo = { channel = "conda-forge" }
+cuda = "12.6.*"
+# cuda-cudart = "12.6.*"
+# cuda-cudart-dev = "*"
+# cuda-cudart-static = "*"
+# cuda-crt = "*"
+# cuda-compiler = "*"
+# cuda-compat = "*"
+# pytorch-cuda = "12.4.*"
+# cuda-driver-dev = "12.4.*"
+# cuda-version = { version = "12.4" }
+# cudnn = "*"
+pytorch = { version = "2.5.1", build = "*cuda*" }
+libtorch = { version = "2.5.1", build = "*cuda*" }
+# torchaudio = "*"
+# torchvision = "*"
 python = "3.10.*"
-ffmpeg = { channel = "conda-forge" }
-opencv = ">=4.10"
+pip = "*"
+gcc = "=12"
+gxx = "=12"
+cmake = "*"
+ninja = ">=1.12.1,<2"
+setuptools-scm = ">=8.1.0,<9"
+# python-ninja = "*"
+# fastfetch = "*"
+# ffmpeg = { channel = "conda-forge" }
+# opencv = ">=4.10"
