@@ -15,7 +15,7 @@ cuda = "12.7"
 
 [dependencies]
 cuda = "12.6.*"
-nvidia-ml-py = "*"
+torchvision = "*"
 pytorch = { version = "==2.5.1", build = "*cuda*" }
 python = "3.10.*"
 pip = "*"
