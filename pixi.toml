@@ -1,9 +1,6 @@
 [project]
 authors = ["fecet <xiezej@gmail.com>"]
-channels = [
-  "https://prefix.dev/meta-forge",
-  "conda-forge",
-]
+channels = ["https://prefix.dev/meta-forge", "conda-forge"]
 description = "Add a short description here"
 name = "pixi-cuda"
 platforms = ["linux-64"]
@@ -15,10 +12,10 @@ cuda = "12.7"
 
 [dependencies]
 cuda = "12.6.*"
+pytorch = { version = "==2.6.0", build = "*cuda*" }
 torchvision = "*"
-pytorch = { version = "==2.5.1", build = "*cuda*" }
+torchaudio = { version = "*", build = "*cuda*" }
 python = "3.10.*"
 pip = "*"
 opencv = "*"
-torchaudio = { version = "==2.5.1", build = "*cuda*" }
 ffmpeg = "*"
