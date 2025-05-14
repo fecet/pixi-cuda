@@ -7,11 +7,14 @@ platforms = ["linux-64"]
 version = "0.1.0"
 [system-requirements]
 cuda = "12.7"
+libc = { family = "glibc", version = "2.28" }
 
 [tasks]
 
 [dependencies]
 cuda = "12.6.*"
+cuda-python = "*"
+cuda-compat = "*"
 pytorch = { version = "==2.6.0", build = "*cuda*" }
 torchvision = "*"
 torchaudio = { version = "*", build = "*cuda*" }
@@ -19,3 +22,6 @@ python = "3.10.*"
 pip = "*"
 opencv = "*"
 ffmpeg = "*"
+
+[activation.env]
+TRITON_LIBCUDA_PATH = "$CONDA_PREFIX/cuda-compat"
